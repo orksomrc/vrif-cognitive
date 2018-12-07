@@ -28,7 +28,7 @@ var responseTextField = document.getElementById('QR~' + qidstr);
 var number = Math.floor((Math.random() * (999999 - 100001) + 100001))
 
 //set an embedded field that records the randomly generated number
-Qualtrics.SurveyEngine.setEmbeddedData('q6fa_number', number)                              
+Qualtrics.SurveyEngine.setEmbeddedData('q6fb_number', number)                              
 
 //make number into string of individual letters
 var outputArr = [],
@@ -122,17 +122,17 @@ console.log('response text entry 1 is: ' + currentResponse)
 Qualtrics.SurveyEngine.setEmbeddedData('ed_field_name', currentResponse)                              
 
 /* get the randomly generated number */
-var randNumber = Qualtrics.SurveyEngine.getEmbeddedData('q6fa_number')                              
+var randNumber = Qualtrics.SurveyEngine.getEmbeddedData('q6fb_number')                              
 
 /*check if the number variable is the same as the currentResponse variable*/
 if(currentResponse == randNumber)
 {
-	Qualtrics.SurveyEngine.setEmbeddedData('q6fa_answer',1)
+	Qualtrics.SurveyEngine.setEmbeddedData('q6fb_answer',1)
 	console.log('result of the question is True')
 }
 else 
 {
-	Qualtrics.SurveyEngine.setEmbeddedData('q6fa_answer',0)
+	Qualtrics.SurveyEngine.setEmbeddedData('q6fb_answer',0)
 	console.log('result of the question is False')
 }
 
