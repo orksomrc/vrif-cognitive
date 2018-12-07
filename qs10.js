@@ -33,9 +33,9 @@ var minuend = getRandom(100, 999)
 var subtrahend = getRandom(5,9) 
 var result = minuend - subtrahend
 //set an embedded field that records the randomly generated number
-Qualtrics.SurveyEngine.setEmbeddedData('qs9_minuend', minuend)                              
-Qualtrics.SurveyEngine.setEmbeddedData('qs9_subtrahend', subtrahend)
-Qualtrics.SurveyEngine.setEmbeddedData('qs9_result', result)
+Qualtrics.SurveyEngine.setEmbeddedData('qs10_minuend', minuend)                              
+Qualtrics.SurveyEngine.setEmbeddedData('qs10_subtrahend', subtrahend)
+Qualtrics.SurveyEngine.setEmbeddedData('qs10_result', result)
 //make number into string of individual letters
 var minuendArr = [],
 sMinuend = minuend.toString();
@@ -123,18 +123,18 @@ Qualtrics.SurveyEngine.setEmbeddedData('ed_field_name', currentResponse)
 
 /* get the randomly generated number */
 
-var result = Qualtrics.SurveyEngine.getEmbeddedData('qs9_result')
+var result = Qualtrics.SurveyEngine.getEmbeddedData('qs10_result')
 
 
 /*check if the number variable is the same as the currentResponse variable*/
 if(currentResponse == result)
 {
-	Qualtrics.SurveyEngine.setEmbeddedData('qs9_answer',1)
+	Qualtrics.SurveyEngine.setEmbeddedData('qs10_answer',1)
 	console.log('result of the question is True')
 }
 else 
 {
-	Qualtrics.SurveyEngine.setEmbeddedData('qs9_answer',0)
+	Qualtrics.SurveyEngine.setEmbeddedData('qs10_answer',0)
 	console.log('result of the question is False')
 }
 
